@@ -1,20 +1,15 @@
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
 
-function success(pos) {
-  var crd = pos.coords;
 
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-}
 
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
+let token = process.env.TOKEN
+let city = 'prato'
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+fetch('https://api.waqi.info/feed/'+city+'/?token='+token)
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+  fetch('https://api.waqi.info/feed/here/'+'?token='+token)
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
