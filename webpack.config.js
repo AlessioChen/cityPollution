@@ -1,16 +1,40 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { template } = require('lodash');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     mode: 'development',
-    entry: './src/scripts/index.js',
+    devtool: 'inline-source-map',
+    entry: {
+        index: './src/js/index.js',
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Development',
+            template: './template.html'
+        }),
+
+        new Dotenv()
+    ],
     output: {
-        filename: 'main.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true, 
     },
     devServer: {
-        contentBase: './dist',
+        hot: false, 
+        inline: false,
     },
-    plugins: [new HtmlWebpackPlugin(), new Dotenv()],
+    module: {
+        rules: [{
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+        ],
+    },
 };
