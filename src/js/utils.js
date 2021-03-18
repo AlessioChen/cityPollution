@@ -3,8 +3,9 @@ import $ from 'jquery'
 
 export function APIRequest(url) {
 
-    $.getJSON(url, function(result) {
-        console.log(result);
+    $.getJSON(url, function (result) {
+
+        console.log(result.data);
 
         //TODO wrong input
         if (!result || result.status != 'ok') {
@@ -16,18 +17,32 @@ export function APIRequest(url) {
             console.log("Sorry, there is no result for you query!");
         }
 
-        console.log(result.data.iaqi);
-        let content = $('.content')
+        //city name 
+        let elem = document.getElementById('cityName');
 
-        for (let name in result.data.iaqi) {
-        
+        if (result.data.city != null)
+            elem.textContent = 'Stazione: ' +result.data.city.name;
+
+        //aqi value 
+        elem = document.getElementById('aqi');
+        elem.textContent = result.data.aqi;
+
+
+
+
+        for (let id in result.data.iaqi) {
+
             let l = result.data.iaqi;
-            console.log(name);
-            
-            
-            content.append($('<p>').html(name + ' : ' + l[name].v));
-    
+            let value = l[id].v;
+            elem = document.getElementById(id);
+
+            if (elem != null)
+                elem.textContent = value;
+
+
+
         }
 
     });
 }
+
