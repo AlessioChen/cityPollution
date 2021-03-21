@@ -21,8 +21,10 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "jsdom": "^16.5.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "popper.js": "^1.16.1"
   }
 }

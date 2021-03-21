@@ -3,8 +3,7 @@ import '../css/style.css';
 import { APIRequest } from './utils'
 import { geoLocation } from './geoLocation'
 import $ from 'jquery'
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //requestAQI(city);
 const token = process.env.AQI_TOKEN;
@@ -26,8 +25,6 @@ $('#input').keyup(function () {
             APIRequest(url);
         }, 250);
     }
-
-
 
 });
 

@@ -19,7 +19,7 @@ function success(pos) {
     // console.log(`Longitude: ${crd.longitude}`);
     // console.log(`More or less ${crd.accuracy} meters.`);
     let url = apiUrl + 'geo' + ':' + crd.latitude + ';' + crd.longitude + '/?token=' + token;
-
+    
     //sends and api request with user's coordinates
     APIRequest(url);
 

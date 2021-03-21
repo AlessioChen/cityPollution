@@ -9,64 +9,121 @@
 
 <body>
 
+    <!-- Section Main table -->
+    <section class="main-table">
+        <div class="conatainer">
+            <div class="h1 text-center ">Stato inquinamento e metereologico</div>
 
-    <input type="text" id="input" name="city" class="search-box" id="cityName" placeholder="Inserisci una città">
-    
-    <h2 id='cityName'> </h2>
-    <h3 id="aqi"> </h3> 
+            <div class="row">
+                <div class="col col-md-4">
+                </div>
+                <div class="col col-md-4">       
+                    <div class="table-responsive-sm text-center mt-3 mb-5">
+                        <table class="table border border-dark">
+                            <thead class="border border-dark">
+                                <tr>
+                                    <th id='stationName'scope="col" class="border border-dark">-</th>
+                                    <th id='staionValue'scope="col" class="border border-dark">-</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-dark">Monossido di carbonio</td>
+                                    <td class="border border-dark" id='co'>-</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-dark">Umidità relativa</td>
+                                    <td class="border border-dark" id='h'>-</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-dark">Diossido di azoto</td>
+                                    <td class="border border-dark" id="no2">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-dark">Ozono</td>
+                                    <td class="border border-dark" id="o3">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-dark">Pressione atmosferica</td>
+                                    <td class="border border-dark" id="p">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-dark">PM<sub>2.5</sub></td>
+                                    <td class="border border-dark" id="pm25">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-dark">PM<sub>10</sub></td>
+                                    <td class="border border-dark" id="pm10">-</td>
+                                </tr>
 
-    <table>
-        <tr>
-            <th>Nome parametro</th>
-            <th>Valore</th>
-        </tr>
-        <tr>
-            <td>Monossido di carbonio</td>
-            <td id='co'>-</td>
-        </tr>
-        <tr>
-            <td>Umidità relativa</td>
-            <td id='h'>-</td>
-        </tr>
-        <tr>
-            <td>Diossido di azoto</td>
-            <td id="no2">-</td>
-        </tr>
-        <tr>
-            <td>Ozono</td>
-            <td id="o3">-</td>
-        </tr>
-        <tr>
-            <td>Pressione atmosferica</td>
-            <td id="p">-</td>
-        </tr>
-        <tr>
-            <td>PM<sub>2.5</sub></td>
-            <td id="pm25">-</td>
-        </tr>
-        <tr>
-            <td>PM<sub>10</sub></td>
-            <td id="pm10">-</td>
-        </tr>
+                                <tr>
+                                    <td class="border border-dark">Diossido di zolfo</sub>
+                                    </td>
+                                    <td class="border border-dark" id="d">-</td>
+                                </tr>
 
-        <tr>
-            <td>Diossido di zolfo</sub></td>
-            <td id="d">-</td>
-        </tr>
+                                <tr>
+                                    <td class="border border-dark">Temperatura</td>
+                                    <td class="border border-dark" id="t">-</td>
+                                </tr>
 
-        <tr>
-            <td>Temperatura<sub>10</sub></td>
-            <td id="t">-</td>
-        </tr>
+                                <tr>
+                                    <td class="border border-dark">Vento</td>
+                                    <td class="border border-dark" id="w">-</td>
+                                </tr>
 
-        <tr>
-            <td>Vento<sub>10</sub></td>
-            <td id="w">-</td>
-        </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Standards table -->
+    <section class="standards-table">
+        <div class="container">
+            <div class="h1 text-center"> Standard Qualità aria (Aqi) </div>
+
+            <div class="table-responsive-sm text-center mt-5 mb-5">
+                <table class="table border border-dark">
+                    <tbody>
+                        <tr>
+                            <td class="good border border-dark">0~50</td>
+                            <td class="normal border border-dark">51~100</td>
+                            <td class="sensitive border border-dark">101~150</td>
+                            <td class="bad border border-dark">151~200</td>
+                            <td class="verybad border border-dark">201~300</td>
+                            <td class="danger border border-dark ">301~400</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-dark">Molto buona</td>
+                            <td class="border border-dark">Buona</td>
+                            <td class="border border-dark">Dannosa per poche persone</td>
+                            <td class="border border-dark">Dannosa per tutta la popolazione</td>
+                            <td class="border border-dark">Molto dannosa</td>
+                            <td class="border border-dark">Percicolosa</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
 
 
 
-    </table>
+
+
+
+
+
+
+
+
 
 </body>
 
