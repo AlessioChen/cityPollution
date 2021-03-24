@@ -9,83 +9,121 @@
 
 <body>
 
-    <!-- Section Main table -->
-    <section class="main-table">
-        <div class="conatainer">
-            <div class="h1 text-center ">Stato inquinamento e metereologico</div>
 
-            <div class="row">
-                <div class="col col-md-4">
-                </div>
-                <div class="col col-md-4">       
-                    <div class="table-responsive-sm text-center mt-3 mb-5">
-                        <table class="table border border-dark">
-                            <thead class="border border-dark">
-                                <tr>
-                                    <th id='stationName'scope="col" class="border border-dark">-</th>
-                                    <th id='staionValue'scope="col" class="border border-dark">-</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-dark">Monossido di carbonio</td>
-                                    <td class="border border-dark" id='co'>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-dark">Umidità relativa</td>
-                                    <td class="border border-dark" id='h'>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-dark">Diossido di azoto</td>
-                                    <td class="border border-dark" id="no2">-</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-dark">Ozono</td>
-                                    <td class="border border-dark" id="o3">-</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-dark">Pressione atmosferica</td>
-                                    <td class="border border-dark" id="p">-</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-dark">PM<sub>2.5</sub></td>
-                                    <td class="border border-dark" id="pm25">-</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-dark">PM<sub>10</sub></td>
-                                    <td class="border border-dark" id="pm10">-</td>
-                                </tr>
 
-                                <tr>
-                                    <td class="border border-dark">Diossido di zolfo</sub>
-                                    </td>
-                                    <td class="border border-dark" id="d">-</td>
-                                </tr>
+    <div class="container-fluid app-container">
 
-                                <tr>
-                                    <td class="border border-dark">Temperatura</td>
-                                    <td class="border border-dark" id="t">-</td>
-                                </tr>
 
-                                <tr>
-                                    <td class="border border-dark">Vento</td>
-                                    <td class="border border-dark" id="w">-</td>
-                                </tr>
+        <!-- Header -->
 
-                            </tbody>
-                        </table>
-                    </div>
+        <header>
+
+            <div class="header" id='header'>
+                <h1>City's Poluttions Info</h1>
+            </div>
+
+
+
+        </header>
+
+        <!-- Search bar-->
+
+        <div class="input-group">
+            <div class="search-bar">
+                <form id='request'>
+                    <input type="text" class='search-box' id='city' name='city' autocomplete="city" placeholder="Inserisci una città">
+                    <input type="submit" class='search-button' value='Cerca'>
+                </form>
+            </div>
+        </div>
+
+        <!-- main result-->
+        <div class="main-result">
+
+
+            <!-- Main reports-->
+            <div class="main-report">
+                <p class="title" id='city-name'> </p>
+                <p id="time-info" class="info"></p>
+
+
+                <div class="report">
+
+                    <img class='info' id='pollution-level-icon' src="https://via.placeholder.com/140x100" alt="Immagine non trovata!" class="icon"></a>
+
+                    <p id='aqi-text'> </p>
+
                 </div>
 
             </div>
+
+
+            <h2>Tabella Misurazioni</h2>
+
+            <!-- Main table-->
+
+            <div class="main-table">
+                <table class="table border border-info">
+
+                    <tbody>
+                        <tr>
+
+                            <td class="border border-info info">Monossido di carbonio</td>
+                            <td class="border border-info info" id='co'>-</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-info info">Umidità relativa</td>
+                            <td class="border border-info info" id='h'>-</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-info info">Diossido di azoto</td>
+                            <td class="border border-info info" id="no2">-</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-info info">Ozono</td>
+                            <td class="border border-info info" id="o3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-info info">Pressione atmosferica</td>
+                            <td class="border border-info info" id="p">-</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-info info">PM<sub>2.5</sub></td>
+                            <td class="border border-info info" id="pm25">-</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-info info">PM<sub>10</sub></td>
+                            <td class="border border-info info" id="pm10">-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="border border-info info">Diossido di zolfo</sub>
+                            </td>
+                            <td class="border border-info info" id="d">-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="border border-info info">Temperatura</td>
+                            <td class="border border-info info" id="t">-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="border border-info info">Vento</td>
+                            <td class="border border-info info" id="w">-</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        <h2>Air Quality Index Scale</h2>
+
         </div>
-    </section>
 
-    <!-- Standards table -->
-    <section class="standards-table">
-        <div class="container">
-            <div class="h1 text-center"> Standard Qualità aria (Aqi) </div>
 
+
+        <!-- Air quality index table-->
+        <div class="index-table">
             <div class="table-responsive-sm text-center mt-5 mb-5">
                 <table class="table border border-dark">
                     <tbody>
@@ -98,7 +136,7 @@
                             <td class="danger border border-dark ">301~400</td>
                         </tr>
                         <tr>
-                            <td class="border border-dark">Molto buona</td>
+                            <td class="border border-dark ">Molto buona</td>
                             <td class="border border-dark">Buona</td>
                             <td class="border border-dark">Dannosa per poche persone</td>
                             <td class="border border-dark">Dannosa per tutta la popolazione</td>
@@ -112,12 +150,11 @@
             </div>
         </div>
 
-    </section>
+
+    </div>
 
 
-
-
-
+    <!-- Footer-->
 
 
 
