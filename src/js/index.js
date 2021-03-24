@@ -12,22 +12,6 @@ const token = process.env.AQI_TOKEN;
 const apiUrl = 'https://api.waqi.info/feed/';
 
 
-//API REQUEST WITH CITY  NAME 
-// $('#request').keyup(function () {
-//     let city = $("#input").val();
-//     //TODO if city ='' handle it
-
-//     if (city != '') {
-//         
-
-//         if (timer) clearTimeout(timer);
-//         timer = setTimeout(function () {
-//             APIRequest(url);
-//         }, 250);
-//     }
-
-// });
-
 $(function () {
     $('#request').submit(function () {
         let city = $("#city").val();

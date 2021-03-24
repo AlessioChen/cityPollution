@@ -1,39 +1,27 @@
-/* body,
-html {
-    margin: 0;
-    text-align: center;
-    font-size: 16px;
-    height: 100%;
-    background-color: #f0f0f0d0;
-}*/
-
 .good {
-    background-color: #95F084;
+    background-color: #009966;
 }
 
-.normal {
-    background-color: #FFE695;
+.moderate {
+    background-color: #ffde33;
 }
 
 .sensitive {
-    background-color: #FFAF6A;
+    background-color: #ff9933;
 }
 
 .bad {
-    background-color: #FF5757;
+    background-color: #cc0033;
 }
 
 .verybad {
-    background-color: #9777FF;
+    background-color: #660099;
 }
 
 .danger {
-    background-color: #AD1774;
+    background-color: #7e0023;
 }
 
-#stationName {
-    font-size: 13px;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap');
 :root {
@@ -156,14 +144,22 @@ body {
 .main-report {
     text-align: center;
     
+    
 }
 
-.main-result #aqi {
+.main-report .aqi {
+
     font-family: 'Open Sans', sans-serif;
     color: #fff;
-    font-size: 40px;
+    font-size: 80px;
     margin-left: auto;
 }
+
+.aqi#aqi-text{
+    width: 50%;
+}
+
+
 
 .main-result .main-table {
     background-color: #40dd602b;
